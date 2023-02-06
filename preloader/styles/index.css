@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1E1E1E;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+h1 {
+    color: #C01A18;
+    font-size: 90px;
+    text-align: center;
+    width: 100%;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#progressBarContainer {
+    width: 90%;
+    height: 100px;
+    background-color: #ddd;
+    border-radius: 30px;
+    overflow: hidden;
+    margin: 50px 0px 50px 0px;
+}
+
+#progressBar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #861211, #C01A18, #E8515A);
+    background-size: 400% 400%;
+    animation: changue 5s ease-in-out infinite;
+}
+
+#percentageLabel {
+    font-size: 50px;
+    text-align: center;
+    font-family: sans-serif;
+    line-height: 100px;
+    color: #1E1E1E;
+}
+
+#finishMsg {
+    visibility: hidden;
+    font-size: 25px;
+    color: #ddd;
+}
+
+@keyframes changue {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
